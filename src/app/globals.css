@@ -1,0 +1,182 @@
+@import 'tailwindcss';
+
+:root {
+  --paper: #f3efe7;
+  --paper-2: #e9e3d7;
+  --ink: #16140f;
+  --ink-2: #4b463e;
+  --line: #d5cdbf;
+  --night: #12110e;
+  --night-2: #1d1b17;
+  --on-night: #ede8de;
+  --on-night-2: #a49e93;
+  --line-night: #34312b;
+  --accent: #b83c10;
+  --accent-hover: #9c320c;
+  --on-accent: #fbf7f0;
+
+  --gutter: clamp(16px, 4vw, 56px);
+  --max: 1440px;
+
+  --step--1: clamp(0.82rem, 0.8rem + 0.1vw, 0.88rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.25rem + 1.2vw, 2.25rem);
+  --step-3: clamp(2rem, 1.5rem + 2.4vw, 3.5rem);
+  --step-4: clamp(2.6rem, 1.6rem + 4.8vw, 6rem);
+  --step-5: clamp(2.9rem, 1.4rem + 7vw, 8.5rem);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-line: var(--line);
+  --color-night: var(--night);
+  --color-night-2: var(--night-2);
+  --color-on-night: var(--on-night);
+  --color-on-night-2: var(--on-night-2);
+  --color-line-night: var(--line-night);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-schibsted);
+}
+
+html {
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-schibsted), system-ui, sans-serif;
+  font-size: var(--step-0);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.display {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 380;
+  font-variation-settings: 'opsz' 144, 'SOFT' 30;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.label {
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  min-height: 48px;
+  padding: 0 1.4em;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: var(--step-0);
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-ghost {
+  border: 1px solid currentColor;
+}
+
+.btn-ghost:hover {
+  background: color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: 500;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.link-arrow span {
+  transition: transform 0.2s;
+}
+
+.link-arrow:hover span {
+  transform: translateX(4px);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  transition: transform 0.25s;
+}
+
+details[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
