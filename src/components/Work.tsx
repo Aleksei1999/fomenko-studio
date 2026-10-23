@@ -1,7 +1,6 @@
 import { PROJECTS } from '@/lib/content';
 import { asset } from '@/lib/site';
 import Reveal from './Reveal';
-import LoopVideo from './LoopVideo';
 
 export default function Work() {
   return (
@@ -72,24 +71,6 @@ export default function Work() {
             </article>
           ))}
 
-          <article className="grid items-center gap-8 border-t border-line pt-[clamp(3rem,6vw,5rem)] md:grid-cols-12 md:gap-10">
-            <Reveal className="md:col-span-6">
-              <LoopVideo
-                src={asset('/work/nebosvod.mp4')}
-                poster={asset('/work/nebosvod.webp')}
-                label="Nebosvod billboard: residential towers at sunset, camera drifting past the facade"
-              />
-            </Reveal>
-            <Reveal delay={0.1} className="md:col-span-5 md:col-start-8">
-              <p className="label text-ink-2">Motion</p>
-              <h3 className="display mt-3 text-[length:var(--step-2)]">Nebosvod</h3>
-              <p className="mt-4 text-ink-2">
-                Billboard motion campaign for a residential complex: a ten-second loop with the
-                camera drifting past the towers at sunset, delivered in six outdoor screen sizes.
-                Not a website, but the same eye for movement goes into every site.
-              </p>
-            </Reveal>
-          </article>
         </div>
       </div>
     </section>
