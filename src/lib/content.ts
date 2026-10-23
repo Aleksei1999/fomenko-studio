@@ -38,6 +38,20 @@ export const PROJECTS: Project[] = [
       { src: '/work/copper-garden-3.webp', alt: 'Copper Garden: macro shot of bouclé chair upholstery with fabric details' },
     ],
   },
+  {
+    slug: 'halden',
+    title: 'The Halden',
+    category: 'Real estate',
+    summary: 'A limestone tower that builds itself as you scroll.',
+    did: 'The tower assembles from flying stone and steel, then pauses mid-air while blueprint lines trace each part with its dimensions and material. It ends on the finished building with residence prices and a viewing form.',
+    stack: ['Next.js', 'Canvas frame sequences', 'Animated SVG drawing'],
+    url: 'https://aleksei1999.github.io/halden/',
+    images: [
+      { src: '/work/halden-1.webp', alt: 'The Halden home screen: stone blocks rising from a dusty building site' },
+      { src: '/work/halden-2.webp', alt: 'The Halden: blueprint lines measuring a floor plate and column cage in mid-air' },
+      { src: '/work/halden-3.webp', alt: 'The Halden: the finished limestone tower with notes on the crown terrace and facade' },
+    ],
+  },
 ];
 
 export const STEPS = [
