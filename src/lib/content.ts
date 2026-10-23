@@ -52,6 +52,20 @@ export const PROJECTS: Project[] = [
       { src: '/work/halden-3.webp', alt: 'The Halden: the finished limestone tower with notes on the crown terrace and facade' },
     ],
   },
+  {
+    slug: 'milo-pals',
+    title: 'Milo & Pals',
+    category: 'Entertainment / animation',
+    summary: 'Announcement site for an animated series.',
+    did: 'On the first screen the hero turns his head to follow your cursor. Scroll down and the page rips like paper into a zero-gravity scene that plays with the scroll, then on to character cards and the worlds of the show.',
+    stack: ['Next.js', 'Cursor-driven frame sequence', 'SVG paper-tear masks'],
+    url: 'https://aleksei1999.github.io/milo-pals/',
+    images: [
+      { src: '/work/milo-pals-1.webp', alt: 'Milo & Pals home screen: Milo under a giant glowing mushroom, looking towards the cursor' },
+      { src: '/work/milo-pals-2.webp', alt: 'Milo & Pals: the crew floating in zero gravity with the line Gravity: off' },
+      { src: '/work/milo-pals-3.webp', alt: 'Milo & Pals: character cards for Milo, Zoe, Bibo and Nova' },
+    ],
+  },
 ];
 
 export const STEPS = [
