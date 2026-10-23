@@ -7,7 +7,7 @@ import { Faq, FinalCta, Founder, Intro, Pricing, Process } from '@/components/Se
 export default function Home() {
   return (
     <>
-      <Header overHero />
+      <Header />
       <main id="main">
         <Hero />
         <Intro />

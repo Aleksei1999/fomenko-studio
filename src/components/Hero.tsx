@@ -2,7 +2,13 @@
 
 import Link from 'next/link';
 import { useRef, useState } from 'react';
-import { motion, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from 'framer-motion';
+import {
+  motion,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from 'framer-motion';
 import { asset } from '@/lib/site';
 
 const LOOKS = [
@@ -40,47 +46,45 @@ export default function Hero() {
     <section
       id="hero"
       ref={sectionRef}
-      className="relative bg-night text-on-night"
+      className="relative bg-[#f1eeea] text-ink"
       style={{ height: reduce ? '100svh' : '300svh' }}
     >
       <div className="sticky top-0 h-[100svh] min-h-[560px] overflow-hidden">
-        {/* мягкий свет за моделью, чтобы мех не терялся на тёмном фоне */}
+        {/* кадр как на сайте LEONERO: модель целиком, по центру, стоит на нижнем крае */}
+        <div className="absolute bottom-0 left-1/2 aspect-video h-[54svh] -translate-x-1/2 md:left-[72%] md:h-[90svh]">
+          <motion.div
+            style={{ scale: reduce ? 1 : modelScale }}
+            className="absolute inset-0 origin-bottom"
+          >
+            {LOOKS.map((l, i) => (
+              <img
+                key={l.slug}
+                src={lookSrc(l.slug)}
+                alt={i === 0 ? 'Model in a LEONERO fur piece' : ''}
+                aria-hidden={i !== 0}
+                fetchPriority={i === 0 ? 'high' : 'low'}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                className="absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-out"
+                style={{ opacity: i === look ? 1 : 0 }}
+              />
+            ))}
+          </motion.div>
+        </div>
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(55%_65%_at_50%_45%,#3a342c_0%,#1d1b17_55%,#12110e_100%)] md:bg-[radial-gradient(38%_70%_at_70%_50%,#3a342c_0%,#1d1b17_55%,#12110e_100%)]"
-        />
-        <motion.div
-          style={{ scale: reduce ? 1 : modelScale }}
-          className="absolute inset-0 origin-bottom"
-        >
-          {LOOKS.map((l, i) => (
-            <img
-              key={l.slug}
-              src={lookSrc(l.slug)}
-              alt={i === 0 ? 'Model in a LEONERO fur piece' : ''}
-              aria-hidden={i !== 0}
-              fetchPriority={i === 0 ? 'high' : 'low'}
-              loading={i === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              className="absolute left-1/2 top-[9svh] h-[64svh] w-auto max-w-none -translate-x-1/2 transition-opacity duration-500 ease-out [mask-image:linear-gradient(to_bottom,black_78%,transparent)] md:left-auto md:right-[-26%] md:top-auto md:bottom-0 md:h-[100svh] md:translate-x-0"
-              style={{ opacity: i === look ? 1 : 0 }}
-            />
-          ))}
-        </motion.div>
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[linear-gradient(to_top,rgba(18,17,14,0.92)_0%,rgba(18,17,14,0.55)_35%,rgba(18,17,14,0)_65%)] md:bg-[linear-gradient(to_top,rgba(18,17,14,0.9)_0%,rgba(18,17,14,0)_22%),linear-gradient(to_right,rgba(18,17,14,0.85)_0%,rgba(18,17,14,0.4)_40%,rgba(18,17,14,0)_60%)]"
+          className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(241,238,234,0.9)_0%,rgba(241,238,234,0)_30%)] md:bg-[linear-gradient(to_right,rgba(241,238,234,0.85)_0%,rgba(241,238,234,0)_38%)]"
         />
 
         <motion.div
           style={{ opacity: introOpacity, y: introY }}
-          className="wrap absolute inset-x-0 bottom-0 pb-[max(2.5rem,7svh)]"
+          className="wrap absolute inset-x-0 top-20 md:inset-y-0 md:flex md:flex-col md:justify-center"
         >
           <h1 className="display max-w-[13ch] text-[length:var(--step-5)]">
             Websites with a sense of occasion.
           </h1>
           <div className="mt-7 flex flex-col gap-7">
-            <p className="max-w-[30rem] text-[length:var(--step-1)] leading-snug text-on-night/85">
+            <p className="max-w-[30rem] text-[length:var(--step-1)] leading-snug text-ink-2">
               Custom-coded, scroll-driven websites for UK businesses. Designed and built by Alex
               Fomenko, quoted up front, live in weeks.
             </p>
@@ -98,13 +102,13 @@ export default function Hero() {
         {!reduce && (
           <motion.div
             style={{ opacity: outroOpacity, y: outroY }}
-            className="wrap absolute inset-x-0 bottom-0 pb-[max(2.5rem,7svh)]"
+            className="wrap absolute inset-x-0 top-20 md:inset-y-0 md:flex md:flex-col md:justify-center"
           >
-            <p className="label text-on-night/70">What you just scrolled through</p>
+            <p className="label text-ink-2">What you just scrolled through</p>
             <p className="display mt-3 max-w-[14ch] text-[length:var(--step-4)]">
               LEONERO, one of our builds.
             </p>
-            <p className="mt-5 max-w-[28rem] text-on-night/80">
+            <p className="mt-5 max-w-[28rem] text-ink-2">
               A fur label&apos;s storefront where each piece is tried on the model as you scroll.
               Hand-coded, with colour and size selection on every product.
             </p>
@@ -112,7 +116,7 @@ export default function Hero() {
         )}
 
         {!reduce && (
-          <p className="label absolute right-[var(--gutter)] top-24 hidden text-on-night/60 md:block">
+          <p className="label absolute right-[var(--gutter)] top-24 hidden text-ink-2 md:block">
             {String(look + 1).padStart(2, '0')} / {String(LOOKS.length).padStart(2, '0')} ·{' '}
             {LOOKS[look].name}
           </p>
