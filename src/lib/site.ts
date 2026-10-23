@@ -4,7 +4,7 @@ export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 export const asset = (path: string) => `${BASE_PATH}${path}`;
 
 export const SITE_URL = 'https://fomenko.store';
-export const EMAIL = 'profomenkoo@gmail.com';
+export const EMAIL = 'hello@fomenko.store';
 export const INSTAGRAM_URL = 'https://instagram.com/create.fomenko';
 export const INSTAGRAM_HANDLE = '@create.fomenko';
 
