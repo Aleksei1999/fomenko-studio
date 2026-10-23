@@ -24,9 +24,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # сайт на своём домене fomenko.store — без префикса пути репозитория
       - run: npx next build
-        env:
-          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
       # без этого GitHub Pages прячет папку _next
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
