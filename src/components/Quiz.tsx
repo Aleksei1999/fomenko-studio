@@ -14,7 +14,7 @@ const GOALS = [
   'Let me edit it myself',
 ];
 const BUDGETS = ['Under £1.5k', '£1.5–4k', '£4–10k', '£10k+', 'Not sure yet'];
-const TIMELINES = ['As soon as possible', 'In 1–2 months', 'I’m flexible'];
+const TIMELINES = ['As soon as possible', 'Within a month', 'I’m flexible'];
 
 const WELCOME = `Thanks for getting in touch. This is your Fomenko welcome pack.
 
@@ -24,9 +24,9 @@ What happens next
 3. You get a fixed quote and timeline in writing. Nothing starts until you are happy with it.
 
 Prices
-- Landing page: £1,500, typically 1–2 weeks
-- Business website: £3,500, typically 2–4 weeks
-- Premium cinematic website: from £7,500, typically 4–8 weeks
+- Landing page: £1,500, typically 1 day
+- Business website: £3,500, typically 3–4 days
+- Premium cinematic website: from £7,500, typically 1–2 weeks
 - Hosting + care plan: £120/month
 A 50% deposit books your slot and the balance is due at launch.
 

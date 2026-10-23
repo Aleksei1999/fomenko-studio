@@ -57,17 +57,17 @@ export const PROJECTS: Project[] = [
 export const STEPS = [
   {
     title: 'Quote',
-    when: 'Day 1–2',
+    when: 'Within 24 hours',
     text: 'You answer six questions, we have a short call, and you get a fixed price and timeline in writing. Nothing starts until you are happy with it.',
   },
   {
     title: 'Design',
-    when: 'Week 1–2',
+    when: 'From day 1',
     text: 'A designed homepage first, so you see the direction on real content before the rest is built. Two rounds of changes are included.',
   },
   {
     title: 'Build',
-    when: 'Week 2–6',
+    when: '1 day to 2 weeks',
     text: 'Hand-written code on my own component system. You get a private preview link and can watch it come together page by page.',
   },
   {
@@ -91,7 +91,7 @@ export const TIERS: Tier[] = [
   {
     name: 'Landing page',
     price: '£1,500',
-    timeline: '1–2 weeks',
+    timeline: '1 day',
     blurb: 'One sharp page for a launch, a service or a campaign.',
     features: [
       'Single scrolling page, custom design',
@@ -105,7 +105,7 @@ export const TIERS: Tier[] = [
   {
     name: 'Business website',
     price: '£3,500',
-    timeline: '2–4 weeks',
+    timeline: '3–4 days',
     blurb: 'A complete site that explains what you do and brings in work.',
     featured: true,
     features: [
@@ -121,7 +121,7 @@ export const TIERS: Tier[] = [
     name: 'Premium cinematic',
     price: '£7,500',
     from: true,
-    timeline: '4–8 weeks',
+    timeline: '1–2 weeks',
     blurb: 'A site people remember, like Copper Garden.',
     features: [
       'Everything in Business website',
@@ -143,7 +143,7 @@ export const CARE = {
 export const FAQ = [
   {
     q: 'How long does a website take?',
-    a: 'A landing page usually takes 1–2 weeks, a business website 2–4 weeks and a premium cinematic site 4–8 weeks. The exact timeline goes into your quote, and the biggest variable is how quickly content and feedback come back.',
+    a: 'A landing page usually takes 1 day, a business website 3–4 days and a premium cinematic site 1–2 weeks. The exact timeline goes into your quote, and the biggest variable is how quickly content and feedback come back.',
   },
   {
     q: 'How do payments work?',

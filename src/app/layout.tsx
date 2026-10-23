@@ -21,7 +21,7 @@ const sans = Schibsted_Grotesk({
 
 const title = 'Fomenko — custom-coded websites for UK businesses';
 const description =
-  'Premium, scroll-driven websites hand-coded by Alex Fomenko. No page builders, fixed quotes, live in weeks. Landing pages from £1,500.';
+  'Premium, scroll-driven websites hand-coded by Alex Fomenko. No page builders, fixed quotes, live in days. Landing pages from £1,500.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${SITE_URL}/`),

@@ -23,7 +23,7 @@ export function Intro() {
         <Reveal delay={0.1} className="md:col-span-4 md:pt-3">
           <p className="text-ink-2">
             Fomenko is a one-person web studio. I design and hand-code websites on my own code
-            system, with AI doing the slow parts, so a bespoke site takes weeks rather than months.
+            system, with AI doing the slow parts, so a bespoke site takes days rather than months.
           </p>
         </Reveal>
         <ul className="grid gap-px overflow-hidden rounded-[6px] border border-line bg-line sm:grid-cols-2 md:col-span-12 lg:grid-cols-4">

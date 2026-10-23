@@ -86,7 +86,7 @@ export default function Hero() {
           <div className="mt-7 flex flex-col gap-7">
             <p className="max-w-[30rem] text-[length:var(--step-1)] leading-snug text-ink-2">
               Custom-coded, scroll-driven websites for UK businesses. Designed and built by Alex
-              Fomenko, quoted up front, live in weeks.
+              Fomenko, quoted up front, live in days.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/get-started/" className="btn btn-primary">
