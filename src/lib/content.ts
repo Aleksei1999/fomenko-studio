@@ -11,20 +11,6 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: 'copper-garden',
-    title: 'Copper Garden',
-    category: 'Real estate',
-    summary: 'Residential development concept with a cinematic scroll.',
-    did: 'The camera flies from the riverbank into an apartment as you scroll, then stops on the furniture with product callouts and a macro of the upholstery fabric.',
-    stack: ['Next.js', 'Canvas frame sequences', 'Framer Motion'],
-    url: 'https://aleksei1999.github.io/copper-garden/',
-    images: [
-      { src: '/work/copper-garden-1.webp', alt: 'Copper Garden home screen: copper towers on a riverbank at dusk' },
-      { src: '/work/copper-garden-2.webp', alt: 'Copper Garden: inside the apartment with the headline Welcome home' },
-      { src: '/work/copper-garden-3.webp', alt: 'Copper Garden: macro shot of bouclé chair upholstery with fabric details' },
-    ],
-  },
-  {
     slug: 'leonero',
     title: 'LEONERO',
     category: 'Fashion / e-commerce',
@@ -36,6 +22,20 @@ export const PROJECTS: Project[] = [
       { src: '/work/leonero-1.webp', alt: 'LEONERO home screen: The Fur Collection with a model wearing a grey fur cape' },
       { src: '/work/leonero-2.webp', alt: 'LEONERO: grid of customer photos in fur jackets' },
       { src: '/work/leonero-3.webp', alt: 'LEONERO product page: grey jacket with colour and size options' },
+    ],
+  },
+  {
+    slug: 'copper-garden',
+    title: 'Copper Garden',
+    category: 'Real estate',
+    summary: 'Residential development concept with a cinematic scroll.',
+    did: 'The camera flies from the riverbank into an apartment as you scroll, then stops on the furniture with product callouts and a macro of the upholstery fabric.',
+    stack: ['Next.js', 'Canvas frame sequences', 'Framer Motion'],
+    url: 'https://aleksei1999.github.io/copper-garden/',
+    images: [
+      { src: '/work/copper-garden-1.webp', alt: 'Copper Garden home screen: copper towers on a riverbank at dusk' },
+      { src: '/work/copper-garden-2.webp', alt: 'Copper Garden: inside the apartment with the headline Welcome home' },
+      { src: '/work/copper-garden-3.webp', alt: 'Copper Garden: macro shot of bouclé chair upholstery with fabric details' },
     ],
   },
 ];
