@@ -80,6 +80,20 @@ export const PROJECTS: Project[] = [
       { src: '/work/erics-3.webp', alt: "Eric's: a pink box filled with pastries and the line A good morning, boxed" },
     ],
   },
+  {
+    slug: 'gold-apple',
+    title: 'Gold Apple Parfum',
+    category: 'Beauty / fragrance',
+    summary: 'Concept launch site for a fragrance collection in five characters.',
+    did: 'A woman wipes the fog off a glass as you scroll, the steam dissolves into a golden room, and one bottle travels through five scenes while its colour changes with each scent. Then the five characters as cards, the bottle and a closing campaign shot.',
+    stack: ['Next.js', 'Scroll-driven frame sequence', 'AI-generated campaign film'],
+    url: 'https://aleksei1999.github.io/gold-apple/',
+    images: [
+      { src: '/work/gold-apple-1.webp', alt: 'Gold Apple home screen: a woman behind steamed glass with the headline Every scent reveals a new you' },
+      { src: '/work/gold-apple-2.webp', alt: 'Gold Apple: The Romantic, a rose pink bottle with a gold apple cap among peonies' },
+      { src: '/work/gold-apple-3.webp', alt: 'Gold Apple: The Rebel, a ruby red bottle on a rooftop in red neon light' },
+    ],
+  },
 ];
 
 export const STEPS = [
