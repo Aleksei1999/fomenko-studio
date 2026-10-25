@@ -66,6 +66,20 @@ export const PROJECTS: Project[] = [
       { src: '/work/milo-pals-3.webp', alt: 'Milo & Pals: character cards for Milo, Zoe, Bibo and Nova' },
     ],
   },
+  {
+    slug: 'erics',
+    title: "Eric's",
+    category: 'Bakery',
+    summary: 'Concept website for a neighbourhood bakery in East Dulwich.',
+    did: 'As you scroll, the camera follows a croissant down through flour, a stream of chocolate and a pool of it, until it lands in a pink box that fills up with pastries. Below: the real counter, Thursday bread pre-orders and opening hours.',
+    stack: ['Next.js', 'Scroll-driven frame sequence', 'AI-generated food film'],
+    url: 'https://aleksei1999.github.io/erics/',
+    images: [
+      { src: '/work/erics-1.webp', alt: "Eric's home screen: a golden croissant floating next to the headline Butter, flour and an early start" },
+      { src: '/work/erics-2.webp', alt: "Eric's: the croissant dipped into a pool of melted chocolate with flaked almonds" },
+      { src: '/work/erics-3.webp', alt: "Eric's: a pink box filled with pastries and the line A good morning, boxed" },
+    ],
+  },
 ];
 
 export const STEPS = [
